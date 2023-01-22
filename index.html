@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>BS5.2 Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .navbartest {
+            background-color: rgb(123, 250, 130);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="horizontal-menu">
+            <nav style="background-color: #e3f2fd;" id="cust-nav-1">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo"
+                            width="30" height="24" class="d-inline-block align-text-top">
+                        BS5.2
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container" style="margin-top:100px">
+            <h2>The Navigator Object</h2>
+            <p>The platform property returns the browser platform (operating system):</p>
+            <p id="demo"></p>
+            <Div>
+                <button onclick="myFunctionT()">Add Top</button>
+                <button onclick="myFunctionB()">Add Bottom</button>
+            </Div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("demo").innerHTML = 
+"navigator.platform is " + navigator.platform;
+        window.onload = function () {
+            const attr = document.createAttribute("class");
+
+            // Set the value of the href attribute:
+            attr.value = "navbar navbar-expand-lg fixed-top col-lg-12 col-12 p-1";
+
+            // Add the href attribute to an element:
+            document.getElementById("cust-nav-1").setAttributeNode(attr);
+        };
+        function myFunctionT() {
+            const attr = document.createAttribute("class");
+
+            // Set the value of the href attribute:
+            attr.value = "navbar navbar-expand-lg fixed-top col-lg-12 col-12 p-1";
+
+            // Add the href attribute to an element:
+            document.getElementById("cust-nav-1").setAttributeNode(attr);
+        }
+        function myFunctionB() {
+            const attr = document.createAttribute("class");
+
+            // Set the value of the href attribute:
+            attr.value = "navbar navbar-expand-lg fixed-bottom col-lg-12 col-12 p-1";
+
+            // Add the href attribute to an element:
+            document.getElementById("cust-nav-1").setAttributeNode(attr);
+        }
+    </Script>
+</body>
+
+</html>
